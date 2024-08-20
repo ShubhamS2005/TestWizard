@@ -58,7 +58,9 @@ export const GetUser=catchAsyncErrors(async(req,res,next)=>{
 export const UserLogout=catchAsyncErrors(async(req,res,next)=>{
     res.status(200).cookie("userToken","",{
         httpOnly:true,
-        expires:new Date(Date.now())
+        expires:new Date(Date.now()),
+        secure:true,
+        sameSite:"None"
     }).json({
         success:true,
         message:"User Log out succesfully"
@@ -69,6 +71,8 @@ export const AdminLogout=catchAsyncErrors(async(req,res,next)=>{
     res.status(200).cookie("adminToken","",{
         httpOnly:true,
         expires:new Date(Date.now()),
+        secure:true,
+        sameSite:"None"
         
     }).json({
         success:true,
