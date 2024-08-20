@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background:  rgba(255, 81, 0, 0.984);
+}
+/* Navbar */
+.sidebar {
+  position: fixed;
+  width: 120px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  align-items: center;
+  color: #fff;
+  padding: 70px 0;
+}
+.sidebar svg {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
+.sidebar svg:hover {
+  background: #fff;
+  color: #3939d9f2;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.wrapper {
+  display: none;
+}
+.wrapper .hamburger {
+  display: none;
+}
+.hamburger{
+  cursor: pointer;
+}
+
+@media (max-width: 1208px) {
+  .sidebar {
+    background: #3939d9f2;
+    left: -100%;
+    transition: 0.3s;
+  }
+  .show {
+    left: 0;
+    transition: 0.3s;
+  }
+  .wrapper {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    font-size: 34px;
+    background: rgba(255, 81, 0, 0.984);;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 485px) {
+  .wrapper {
+    left: 20px;
+  }
+  .show {
+    width: 80px;
+  }
+}
+
+/* Login */
+.container {
+  padding: 0 100px;
+  background-color: beige;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login img{
+  height: 300px;
+}
+.login p{
+  margin: 1.1rem;
+  color: blue;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+input,select{
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+button{
+  margin: 17px;
+  height: 45px;
+  width: 130px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(140deg, #9083d5, #271776ca);
+}
+button:hover{
+  color: yellow;
+}
+
+
+/* Add Question */
+.page{
+  background-color: beige;
+  margin-left: 115px;
+  height: 100vh;
+  border-top-left-radius: 2.7rem;
+  border-bottom-left-radius: 2.7rem;
+}
+.page h1{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 1.1rem 1.2rem;
+  font-size: 2.5rem;
+}
+.banner{
+  margin:1.1rem 1.2rem;
+}
+.card{
+  background-color: white;
+  margin: 1.1rem 1.2rem;
+  border-radius: 1.5rem;
+}
+.details p{
+  font-size: 16px;
+  margin:1rem;
+  font-weight: 700;
+}
+.details span{
+  font-weight: 500;
+}
+.card h4{
+  margin: 18px;
+}
+
+
+/* Add Question*/
+.page h3{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 1.1rem 1.2rem;
+
+}
+.page h3,.page h1{
+  margin-top: 50px;
+  text-align: center;
+} 
+.form-container{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container select,.form-container input{
+  margin: 1.1rem;
+  padding: 1.1rem 2.3rem;
+}
+input[type="date"]{
+  padding: 0.9rem 3.8rem;
+}
+
+
+
+@media (max-width: 1208px) {
+  .page {
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+@media (max-width: 485px) {
+  .page {
+    padding: 40px 20px;
+  }
+}
+
+/* Dashboard */
+.page .b-container{
+  display: flex;
+}
+.fb-img img{
+  height: 200px;
+  width: 200px;
+  margin: 1.1rem 1.2rem;
+}
+
+.content{
+  margin: 1.1rem 1.2rem;
+  width: 30%;
+}
+.firstBox{
+  background-color:darkkhaki;
+  display: flex;
+  align-items: center;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.firstBox h4{
+  text-transform: capitalize;
+  color: #9083d5;
+  
+}
+.b-container .secondBox{
+  margin: 12px;
+  border-radius: 10px;
+  background-color:white;
+  padding: 1.1rem 3.4rem;
+  text-align: center;
+  color: red;
+
+}
+.b-container{
+  border-radius: 17px;
+}
+.b-container span{
+  font-weight: 900;
+}
+.tdButton p{
+  margin-left: 90%;
+  font-size: 30px;
+  cursor: pointer;
+  color: #f11414a2;
+}
+.tdButton p:hover{
+  color: #dc2626;
+}
