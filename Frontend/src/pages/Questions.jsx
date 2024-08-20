@@ -23,7 +23,7 @@ const Questions = () => {
     const fetchQuestions = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8000/api/v1/questions/getAllQuestions",
+          "https://testwizardbackend.onrender.com/api/v1/questions/getAllQuestions",
            { withCredentials: true }
           )
           setQuestions(data.questions)
@@ -39,7 +39,7 @@ const Questions = () => {
     try {
       e.preventDefault();
       await axios
-        .delete(`http://localhost:8000/api/v1/questions/questionDelete/${qid}`)
+        .delete(`https://testwizardbackend.onrender.com/api/v1/questions/questionDelete/${qid}`)
         .then((res) => {
 
           toast.success(res.data.message);

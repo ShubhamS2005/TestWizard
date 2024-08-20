@@ -18,7 +18,7 @@ const AddQuestion = () => {
     try {
       e.preventDefault();
       await axios.post(
-        "http://localhost:8000/api/v1/questions/addquestion",
+        "https://testwizardbackend.onrender.com/api/v1/questions/addquestion",
         { Class,subject,marks,type,question},
         {
           withCredentials: true,
